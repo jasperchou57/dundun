@@ -22,6 +22,12 @@ export default function Home() {
           >
             Browse tools
           </Link>
+          <Link
+            href="/topics"
+            className="rounded-full border border-zinc-200 px-5 py-2 text-sm hover:bg-zinc-50"
+          >
+            Topics (SEO clusters)
+          </Link>
           <a
             href="/sitemap.xml"
             className="rounded-full border border-zinc-200 px-5 py-2 text-sm hover:bg-zinc-50"
