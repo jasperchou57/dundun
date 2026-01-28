@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="mx-auto flex min-h-screen max-w-3xl flex-col gap-10 px-6 py-16">
@@ -7,23 +9,37 @@ export default function Home() {
           SEO-first tools + mini SaaS
         </h1>
         <p className="text-zinc-600">
-          This repo is the bootstrap. Next step: pick a keyword cluster, ship a
-          useful tool, then scale landing pages.
+          We ship quickly, rank quickly, and keep UX clean.
         </p>
       </header>
 
       <section className="rounded-2xl border border-zinc-200 p-6">
-        <h2 className="text-lg font-medium">Today’s next action</h2>
-        <ol className="mt-3 list-inside list-decimal space-y-2 text-zinc-700">
-          <li>Decide target market: EN/US vs EN/Global (ads RPM vs volume).</li>
-          <li>Pick 1 keyword cluster (new term / low competition).</li>
-          <li>Ship a minimal tool page (free) + newsletter signup.</li>
-        </ol>
+        <h2 className="text-lg font-medium">Start here</h2>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <Link
+            href="/tools"
+            className="rounded-full bg-black px-5 py-2 text-sm text-white hover:bg-zinc-800"
+          >
+            Browse tools
+          </Link>
+          <a
+            href="/sitemap.xml"
+            className="rounded-full border border-zinc-200 px-5 py-2 text-sm hover:bg-zinc-50"
+          >
+            Sitemap
+          </a>
+        </div>
       </section>
 
-      <footer className="text-sm text-zinc-500">
-        PR-first workflow. No direct deploys.
-      </footer>
+      <section className="rounded-2xl border border-zinc-200 p-6 text-sm text-zinc-600">
+        <div className="font-medium text-zinc-900">Default strategy</div>
+        <ul className="mt-2 list-inside list-disc space-y-1">
+          <li>Market: EN/US first (higher ad RPM), then expand.</li>
+          <li>Monetization: ads-first, keep email/pro hooks.</li>
+          <li>Link building: white-hat only.</li>
+          <li>Workflow: PR-first, no direct deploys.</li>
+        </ul>
+      </section>
     </div>
   );
 }
